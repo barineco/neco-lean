@@ -1,0 +1,15 @@
+package "neco-lean" language="Lean" {
+  module "System" {
+    operation "readBytes"
+    operation "run"
+  }
+  module "Kdl" {
+    operation "parse"
+    operation "encode"
+  }
+  module "Tui" {
+    component "Tree"
+    component "Viewport"
+    component "Overlay"
+  }
+}

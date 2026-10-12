@@ -1,0 +1,11 @@
+KDL Official Test Suite
+https://github.com/kdl-org/kdl
+
+The test cases in this directory match commit
+4e4c0af9333819aede3cd4867bbc8702dd78f96c.
+
+The test cases are licensed under CC-BY-SA 4.0:
+https://creativecommons.org/licenses/by-sa/4.0/
+
+They are included only for testing and are separate from neco-lean.
+neco-lean is licensed under MIT.

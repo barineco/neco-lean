@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Set up Lean
+        uses: leanprover/lean-action@v1
+      - name: Build and test
+        run: |
+          lake build
+          lake exe neco-lean-tests -- all
+      - name: Check that build outputs stay in the build directory
+        run: |
+          git diff --exit-code
+          test -z "$(git ls-files --others --exclude=.lake)"

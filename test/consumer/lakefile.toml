@@ -1,0 +1,11 @@
+name = "neco-lean-consumer"
+version = "0.1.0"
+defaultTargets = ["neco-lean-consumer"]
+
+[[require]]
+name = "neco-lean"
+path = "../.."
+
+[[lean_exe]]
+name = "neco-lean-consumer"
+root = "Consumer"

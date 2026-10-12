@@ -1,0 +1,25 @@
+name = "neco-lean"
+version = "0.1.0"
+defaultTargets = ["NecoLean", "neco-lean-tests", "neco-lean-example-cli", "neco-lean-example-kdl", "neco-lean-example-kdl-tui"]
+
+[leanOptions]
+autoImplicit = false
+
+[[lean_lib]]
+name = "NecoLean"
+
+[[lean_exe]]
+name = "neco-lean-tests"
+root = "Tests"
+
+[[lean_exe]]
+name = "neco-lean-example-kdl-tui"
+root = "examples.KdlTreeTui"
+
+[[lean_exe]]
+name = "neco-lean-example-cli"
+root = "examples.CliBasic"
+
+[[lean_exe]]
+name = "neco-lean-example-kdl"
+root = "examples.KdlBasic"
